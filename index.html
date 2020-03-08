@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Raleway:400,500,600,700,800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+</head>
+<body>
+  <div class="new_user">
+   
+    <!-- //navbar -->
+    <div class="navbar">
+      <a href="#">
+        <img src="image/logo_final-2 copy.png" alt="">
+      </a>
+        <ul class="navbar_icons">
+          <li>
+            <a href="#" id="notification_btn" class="notification" >
+                <img src="image/notifications_none-24px.svg" alt="">
+            </a>
+            <ul class="notification_subclass" id="notification_list">
+                <li><a href="#">no notification</a></li>
+            </ul>
+          </li>
+          <li>
+            <img src="image/icons/Ellipse 13.png" alt="">
+          </li>
+          <li class="dropdown">Amy Dan
+            <p>Abc.ltd</p>
+            <ul class="subclass" id="dropdown_list">
+              <li><a href="#">Status : <span style="color: #36AF47;">Online</span></a></li>
+              <li><a href="#">Account Settings</a></li>
+              <li><a href="#">Help & Feedback</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+          <li class="angle_down">
+              <a href="#" id="dropdown_btn" class="clicked"><i style="color: white;" class="fas fa-angle-down"></i></a>
+          </li>
+        </ul>      
+    </div>
+    <!-- //navbar -->
+  
+    <div class="main_section">
+      <div class="sidebar_left">
+        <ul>
+          <li><a href="#" onclick="openSideMenu()"><i class="fas fa-bars"></i></a></li>
+          <li><a href="#"><img src="image/icons/manage camapign.svg" alt=""></a></li>
+          <li class="active"><a href="#"><img src="image/layer14.svg" alt=""></a></li>
+          <li><a href="#"><img src="image/icons/contact list.svg" alt=""></a></li>
+          <li><a href="#"><img src="image/icons/mis analytics.svg" alt=""></a></li>
+          <li><a href="#"><img src="image/icons/user management.svg" alt=""></a></li>
+          <li><a href="#"><img src="image/icons/user services.svg" alt=""></a></li>
+        </ul>
+      </div>
+      <div id="side-menu" class="side-nav">
+        <ul>
+          <li>
+              <i class="fas fa-bars" onclick="closeSideMenu()"></i>
+          </li>
+          <li class="active">
+            <div class="align">
+              <div>
+                <img src="image/layer14.svg" alt="">
+              </div>
+              <a href="#" class="btn-close active">Dashboard</a>
+            </div>
+          </li>
+          <li >
+            <div class="align">
+              <div>
+                <img src="image/noun_id_1381710 (1).svg" alt="">
+              </div>
+              <a href="#" class="btn-close active">Subscribe Services</a>
+            </div>
+          </li>
+          <li >
+            <div class="align">
+              <div>
+                <img src="image/icons/manage camapign.svg" alt="">
+              </div>
+              <a href="#" class="btn-close active">Manage Campaign</a>
+            </div>
+          </li>
+          <li >
+            <div class="align">
+              <div>
+                <img src="image/icons/contact list.svg" alt="">
+              </div>
+              <a href="#" class="btn-close active">Contact List</a>
+            </div>
+          </li>
+          <li >
+            <div class="align">
+              <div>
+                <img src="image/icons/mis analytics.svg" alt="">
+              </div>
+              <a href="#" class="btn-close active">MIS Analytics</a>
+            </div>
+          </li>
+          <li >
+            <div class="align">
+              <div>
+                <img src="image/icons/user management.svg" alt="">
+              </div>
+              <a href="#" class="btn-close active">User Management</a>
+            </div>
+          </li>
+          <li >
+            <div class="align">
+              <div>
+                <img src="image/icons/user services.svg" alt="">
+              </div>
+              <a href="#" class="btn-close active">User Services</a>
+            </div>
+          </li>
+          <li >
+            <div class="align">
+              <div>
+                <img src="image/icons/user services.svg" alt="">
+              </div>
+              <a href="#" class="btn-close active">Sender Id</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="manage_campaign_right" onclick="closeSideMenu()">
+          
+        <h1>Dashboard</h1>
+
+        <div class="search_page">
+
+          <!-- //top-user -->
+
+          <div class="user_tracker">
+            <div class="users">
+              <div class="users_image">
+                <img src="image/banner dashboard.png" alt="">
+                <div class="users_image_text">
+                  <h2>Welcome back User!!!!</h2>
+                  <span>Chose the best service that suits your requirement</span>
+                </div>
+              </div>
+              
+              <div class="sms_activity">
+                <div class="activity_report">
+                  <div class="left_sms_activity">
+                    <h2>Sms activity report</h2>
+                    <div class="sms_activity_btns">
+                      <div class="first_btn">
+                        <input type="checkbox" name="" id="">
+                        <span>sms sent</span>
+                      </div>
+                      <div class="first_btn">
+                        <input type="checkbox" name="" id="">
+                        <span>sms delivered</span>
+                      </div>
+                      <div class="first_btn">
+                        <input type="checkbox" name="" id="">
+                        <span>sms failed</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="right_sms_dropdowns">
+                      <div class="service_type_list">
+                          <div class="custom-select-wrapper-service">
+                            <div class="custom-select-service">
+                              <div class="custom-select__trigger-service"><span>See All</span>
+                                <div class="arrow-service"></div>
+                              </div>
+                              <div class="custom-options-service">
+                                <span class="custom-option-service selected-service" data-value="tesla">Last Month</span>
+                                <span class="custom-option-service" data-value="volvo">Last 6 Month</span>
+                                <span class="custom-option-service" data-value="mercedes">See All</span>
+                              </div>
+                            </div>
+                          </div>              
+                        </div>
+                        <div class="service_type_list">
+                            <div class="custom-select-wrapper-template">
+                              <div class="custom-select-template">
+                                <div class="custom-select__trigger-template"><span>Last 6 Month</span>
+                                  <div class="arrow-template"></div>
+                                </div>
+                                <div class="custom-options-template">
+                                  <span class="custom-option-template selected-template" data-value="tesla">Today</span>
+                                  <span class="custom-option-template" data-value="volvo">Last Week</span>
+                                  <span class="custom-option-template" data-value="mercedes">Last 6 Month</span>
+                                </div>
+                              </div>
+                            </div>              
+                          </div>
+                  </div>
+                </div>
+                <div class="activity_chart">
+                  <div class="chart">
+                    <canvas id="myChart"></canvas>
+                  </div>
+                </div>
+
+              </div>
+              
+              <div class="sms_types">
+                <div class="sms_types_charts">
+                  <div class="chart_data">
+                    <p>sms sent</p>
+                    <strong>231</strong>
+                  </div>
+                  <div id="chartOne"></div>
+                </div>
+                <div class="sms_types_charts">
+                  <div class="chart_data">
+                    <p>sms delivered</p>
+                    <strong>231</strong>
+                  </div>
+                  <div id="chartTwo"></div>
+                </div>
+                <div class="sms_types_charts">
+                  <div class="chart_data">
+                    <p>sms processing</p>
+                    <strong>231</strong>
+                  </div>
+                  <div id="chartThree"></div>
+                </div>
+                <div class="sms_types_charts">
+                  <div class="chart_data">
+                    <p>sms failed</p>
+                    <strong>231</strong>
+                  </div>
+                  <div id="chartFour"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="trackers">
+              <div class="pie_one">
+                <div class="doughnut_one">
+                  <canvas id="tracker_one_chart"></canvas>
+                </div>
+                <div class="pie_one_text">
+                  <h3>Credits Tracker - Promo</h3>
+                  <ul>
+                    <li>
+                      <input type="checkbox" name="">
+                      <p>Sms</p>
+                      <strong>100</strong>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="">
+                      <p>Voice</p>
+                      <strong>24</strong>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="">
+                      <p>Credit Left</p>
+                      <strong>24</strong>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- //pie_two -->
+              <div class="pie_one">
+                  <div class="doughnut_one">
+                    <canvas id="tracker_two_chart"></canvas>
+                  </div>
+                  <div class="pie_one_text">
+                    <h3>Credits Tracker - Trans</h3>
+                    <ul>
+                      <li>
+                        <input type="checkbox" name="">
+                        <p>Sms</p>
+                        <strong>100</strong>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="">
+                        <p>Voice</p>
+                        <strong>24</strong>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="">
+                        <p>Credit Left</p>
+                        <strong>24</strong>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="need_help">
+                  <h3>Need help?</h3>
+                  <div class="faq">
+                    <img src="image/customer-service.svg" alt="">
+                    <p>Browse our knowledge base and get support from service base</p>
+                    <a href="#">View FAQ</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        
+          <!-- first -->
+          <div class="searchpage_box">
+            <h2 class="emtpy_area">Campaigns</h2>
+            <form action="" class="search_form">
+              <input type="text" class="searchTerm" name="search" placeholder="Search by campaign, Sender ID">
+              <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+             </button>
+            </form>
+            <div class="campaign_type_list">
+                <div class="custom-select-wrapper-language">
+                  <div class="custom-select-language">
+                    <div class="custom-select__trigger-language"><span>Select</span>
+                      <div class="arrow-language"></div>
+                    </div>
+                    <div class="custom-options-language">
+                      <span class="custom-option-language selected-language" data-value="tesla">Select</span>
+                      <span class="custom-option-language" data-value="volvo">Select</span>
+                      <span class="custom-option-language" data-value="mercedes">Select</span>
+                    </div>
+                  </div>
+                </div>              
+              </div>
+            <div class="search_icons">
+              <a href=""><img src="image/noun_export_2135794.svg" alt=""></a>
+              <a href=""><img style="border-left: 1px solid #E8E8E8; border-right: 1px solid #E8E8E8" src="image/edit-24px.svg" alt=""></a>
+              <a href=""><img src="image/delete-24px.svg" alt=""></a>
+            </div>
+          </div>
+          
+          <table class="existing_users_list">
+            <tr>
+              <th><input type="checkbox" name="" id=""></th>
+              <th>CAMPAIGNS</th>
+              <th>SERVICE NAME</th>
+              <th>SENDER ID</th>
+              <th>DETAILS</th>
+              <th>MESSAGE</th>
+              <th>CREATED</th>
+              <th>STATUS</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="" id=""></td>
+              <td>TEST</td>
+              <td>SMSTRANS</td>
+              <td class="openSans">0123456</td>
+              <td>SMS</td>
+              <td class="openSans">Hi there, Lorem ipsum generate text...</td>
+              <td class="openSans">08/21/2014</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" >
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td class="view"><a href="">View Details</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" checked name="" id=""></td>
+              <td>TEST</td>
+              <td>SMSTRANS</td>
+              <td class="openSans">0123456</td>
+              <td>SMS</td>
+              <td class="openSans">Hi there, Lorem ipsum generate text...</td>
+              <td class="openSans">08/21/2014</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td class="view"><a href="">View Details</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="" id=""></td>
+              <td>TEST</td>
+              <td>SMSTRANS</td>
+              <td class="openSans">0123456</td>
+              <td>SMS</td>
+              <td class="openSans">Hi there, Lorem ipsum generate text...</td>
+              <td class="openSans">08/21/2014</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td class="view"><a href="">View Details</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="" checked id=""></td>
+              <td>TEST</td>
+              <td>SMSTRANS</td>
+              <td class="openSans">0123456</td>
+              <td>SMS</td>
+              <td class="openSans">Hi there, Lorem ipsum generate text...</td>
+              <td class="openSans">08/21/2014</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td class="view"><a href="">View Details</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="" id=""></td>
+              <td>TEST</td>
+              <td>SMSTRANS</td>
+              <td class="openSans">0123456</td>
+              <td>SMS</td>
+              <td class="openSans">Hi there, Lorem ipsum generate text...</td>
+              <td class="openSans">08/21/2014</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td class="view"><a href="">View Details</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" checked name="" id=""></td>
+              <td>TEST</td>
+              <td>SMSTRANS</td>
+              <td class="openSans">0123456</td>
+              <td>SMS</td>
+              <td class="openSans">Hi there, Lorem ipsum generate text...</td>
+              <td class="openSans">08/21/2014</td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td class="view"><a href="">View Details</a></td>
+            </tr>
+          </table>
+          
+          <div class="btn_primary">
+            <div class="button">
+              <a href="">
+                <img src="image/icons/+.png" alt="">
+              </a>
+            </div>
+          </div>
+          
+        </div>
+
+    
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
